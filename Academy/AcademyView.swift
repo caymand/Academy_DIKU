@@ -1,21 +1,22 @@
 //
-//  ContentView.swift
+//  AcademyView.swift
 //  Academy
 //
 //  Created by Kristoffer Kortbaek on 31/03/2020.
 //  Copyright © 2020 Kristoffer Kortbaek. All rights reserved.
 //
 
+import Foundation
 import SwiftUI
 
-struct ContentView: View {
+struct AcademyView: View {
     var body: some View {
-        Text("Hello, World!")
+        Text("Test")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct AcademyView_Preview: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AcademyView()
     }
 }
