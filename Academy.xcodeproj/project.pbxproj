@@ -15,6 +15,7 @@
 		7E53A8CA24361C2300D55936 /* AcademyGameMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E53A8C924361C2300D55936 /* AcademyGameMain.swift */; };
 		7EAA7F6F2434A4FB008CE42E /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA7F6E2434A4FB008CE42E /* PlayerTests.swift */; };
 		7EAA7F772434CD60008CE42E /* PlayerNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA7F762434CD60008CE42E /* PlayerNumberView.swift */; };
+		7EB2BF8B243B691C00407132 /* AcademyGameMainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB2BF8A243B691C00407132 /* AcademyGameMainVM.swift */; };
 		7ED3A8672437739B0019CE6C /* AcademyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3A8662437739B0019CE6C /* AcademyViewController.swift */; };
 		7ED3A86B243B3C3D0019CE6C /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3A86A243B3C3D0019CE6C /* CardsView.swift */; };
 		7ED3A86E243B3C790019CE6C /* CardsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3A86D243B3C790019CE6C /* CardsVM.swift */; };
@@ -63,6 +64,7 @@
 		7EAA7F6E2434A4FB008CE42E /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
 		7EAA7F702434A4FB008CE42E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EAA7F762434CD60008CE42E /* PlayerNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNumberView.swift; sourceTree = "<group>"; };
+		7EB2BF8A243B691C00407132 /* AcademyGameMainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyGameMainVM.swift; sourceTree = "<group>"; };
 		7ED3A8662437739B0019CE6C /* AcademyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyViewController.swift; sourceTree = "<group>"; };
 		7ED3A86A243B3C3D0019CE6C /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
 		7ED3A86D243B3C790019CE6C /* CardsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsVM.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				7ED3A8662437739B0019CE6C /* AcademyViewController.swift */,
+				7EB2BF8A243B691C00407132 /* AcademyGameMainVM.swift */,
 				7ED3A86D243B3C790019CE6C /* CardsVM.swift */,
 			);
 			path = AcademyVM;
@@ -404,6 +407,7 @@
 				7E53A8C824360D6900D55936 /* PersonForm.swift in Sources */,
 				7ED3A86B243B3C3D0019CE6C /* CardsView.swift in Sources */,
 				7E53A8CA24361C2300D55936 /* AcademyGameMain.swift in Sources */,
+				7EB2BF8B243B691C00407132 /* AcademyGameMainVM.swift in Sources */,
 				7EDA81A624335DF500E3425E /* AcademyView.swift in Sources */,
 				7E2C58E12433A14E00961CE5 /* Card.swift in Sources */,
 				7ED3A86E243B3C790019CE6C /* CardsVM.swift in Sources */,

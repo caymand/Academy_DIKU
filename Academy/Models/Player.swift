@@ -8,14 +8,17 @@
 
 import Foundation
 
-public struct Player {
+public struct Player: Equatable {
 //    public var sipsLeft: Int
     public var beersDrinken = 0
     public var name: String
+    public var cards = [Card]()
     
     init(name: String) {
         self.name = name        
     }
-    
+    public static func == (lhs: Player, rhs: Player) -> Bool {
+        lhs.name == rhs.name
+    }
 }
 

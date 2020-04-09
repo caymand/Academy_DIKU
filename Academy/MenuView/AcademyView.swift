@@ -12,8 +12,7 @@ import SwiftUI
 struct AcademyView: View {
     
     @ObservedObject var academyVM = AcademyViewController()
-    
-    @State private var didTapBegin = false
+    @State var shouldTransition = false
     
     var body: some View {
         NavigationView {
@@ -40,10 +39,14 @@ struct AcademyView: View {
                     PlayerNumberView(academyVM: academyVM)
                         .padding(.bottom, 50)
                     Spacer()
-                    NavigationLink(destination: AcademyGameMain(game: academyVM.getGame)) {
+                    NavigationLink(destination: AcademyGameMain(game: academyVM.getGame), isActive: $shouldTransition) {
                         Text("Begin")
-                            .font(.title)
                             .foregroundColor(.white)
+                            .font(.title)
+                            .onTapGesture {
+                                print(self.academyVM.canCreateGame)
+                                self.shouldTransition = self.academyVM.canCreateGame
+                            }
                     }
                 }
             }

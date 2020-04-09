@@ -19,7 +19,7 @@ struct PersonForm: View {
                 .font(.subheadline)
                 .foregroundColor(.white)
                 .bold()
-            ForEach(0..<numberOfPlayers) { textFieldNum in
+            ForEach(0..<numberOfPlayers, id: \.self) { textFieldNum in
                 TextField("Enter name: ", text: self.$academyVM.names[textFieldNum])
                 .multilineTextAlignment(.center)
                 .textFieldStyle(RoundedBorderTextFieldStyle())

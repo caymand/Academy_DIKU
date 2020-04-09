@@ -19,7 +19,7 @@ struct PlayerNumberView: View {
                 ForEach(["1", "2", "3", "4", "5", "6"], id: \.self) { button in
                     Button(action: {
                         withAnimation(.easeInOut(duration: 0.25)) {
-                            self.academyVM.buttonTapped = button
+                        self.academyVM.numberOfPlayers = button
                         self.showPersonForm = true
                         }
                     })
@@ -27,14 +27,14 @@ struct PlayerNumberView: View {
                     Text(button)
                         .font(.system(size: 32))
                         .frame(width: 60, height: 80)
-                        .background((self.academyVM.buttonTapped == button) ? Color.yellow : Color.white)
+                        .background((self.academyVM.numberOfPlayers == button) ? Color.yellow : Color.white)
                         .foregroundColor(.black)
                         .padding(.bottom, 20)
                     }
                 }
             }
             if self.showPersonForm {
-                PersonForm(numberOfPlayers: Int(academyVM.buttonTapped)!, academyVM: academyVM)
+                PersonForm(numberOfPlayers: Int(academyVM.numberOfPlayers)!, academyVM: academyVM)
             }
         }
     }

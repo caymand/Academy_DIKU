@@ -9,13 +9,28 @@
 import SwiftUI
 
 struct CardsView: View {
+    @ObservedObject var cardsVM: CardsVM
+    init(game: Game) {
+        cardsVM = CardsVM(game: game)
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Button(action: cardsVM.flipCard) {
+                Image(cardsVM.cardIsFlipped ? cardsVM.nextCardImageName() : "blue_back")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 400)
+            }.disabled(cardsVM.cardIsFlipped)
+            
+            if cardsVM.cardIsFlipped {
+                Text("Sips: \(cardsVM.getCard.sipsForCard())")
+                Spacer()
+                Button(action: cardsVM.nextPlayer) {
+                    Text("Next Player")
+                }
+            }
+        }
     }
 }
 
-struct CardsView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardsView()
-    }
-}

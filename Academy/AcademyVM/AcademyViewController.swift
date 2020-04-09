@@ -10,31 +10,55 @@ import Foundation
 
 public class AcademyViewController: ObservableObject {
     private var game: Game?
-    private var players = [Player]()
-
+    private var players: [Player]?
+    
     @Published var numberOfSips = ""
-    @Published var buttonTapped = ""
+    @Published var numberOfPlayers = ""
     @Published var names = ["", "", "", "", "", ""]
     
-    public var getGame: Game {
-        if let numSips = Int(numberOfSips) {
-            for name in names {
-                if name != "" {
-                    players.append(Player(name: name))
-                }
-            }
-            game = Game(players: players, sipsPerBeer: numSips)            
-            return game!
+    private func playerIsAdded(playerName: String) -> Bool {
+        let player = Player(name: playerName)
+        if let players = players {
+            return players.contains(player)
         } else {
-            return Game(players: [Player(name: "Default Player")], sipsPerBeer: 14)
+            return false
         }
     }
-//
-//    public var getGame: Game {
-//        if let g = game {
-//            return g
-//        } else {
-//            return Game(players: [Player(name: "Default Player")], sipsPerBeer: 14)
-//        }
-//    }
+    
+    private func createGame() {
+        if let numSips = Int(numberOfSips) {
+            if let playerNum = Int(numberOfPlayers) {
+    
+                for i in 0..<playerNum {
+                    if names[i] != "" {
+                        guard playerIsAdded(playerName: names[i]) == false else {return}
+                        if players == nil {
+                            players = [Player(name: names[i])]
+
+                        } else {
+                            players?.append(Player(name: names[i]))
+                        }
+                    }
+                }
+                
+                if players?.count == playerNum {
+                    game = Game(players: players!, sipsPerBeer: numSips)
+                }
+            }
+        }
+    }
+    
+    public var getGame: Game? {
+        return game
+    }
+    
+    public var canCreateGame: Bool {
+        createGame()
+        if game != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    
 }

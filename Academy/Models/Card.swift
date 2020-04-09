@@ -22,4 +22,18 @@ public struct Card {
         }        
         return allCards
     }
+    
+    private func beginStopWatch() {
+        print("Start drinking")
+    }
+    
+    public func sipsForCard() -> Int {
+        switch rank {
+        case .ace:
+            beginStopWatch()
+            return 14
+        default:
+            return rank.rawValue
+        }
+    }
 }

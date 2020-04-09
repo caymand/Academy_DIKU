@@ -9,14 +9,19 @@
 import SwiftUI
 
 struct AcademyGameMain: View {
-    public var game: Game
+    private var game: Game!
+    @ObservedObject var academyGameMainVM: AcademyGameMainVM
     
-    init(game: Game) {
+    init(game: Game?) {
         self.game = game
+        academyGameMainVM = AcademyGameMainVM(game: game)
     }
     
     var body: some View {
-        Text("Sips: \(game.sipsPerBeer), \(game.players[0].name)")
+        VStack {
+            Text(academyGameMainVM.currentPlayer.name)
+            CardsView(game: game)
+        }
     }
 }
 
