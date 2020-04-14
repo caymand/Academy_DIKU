@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Card {
+public struct Card: Hashable {
     public var suit: Suit
     public var rank: Rank
     

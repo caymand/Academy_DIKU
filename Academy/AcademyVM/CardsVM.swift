@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 class CardsVM: ObservableObject {
-    private var game: Game
+    private var game: Game!
     private var currentCard: Card?
     @Published var cardIsFlipped = false
     
-    init(game: Game) {
+    init(game: Game?) {
         self.game = game
     }
     
@@ -29,12 +29,14 @@ class CardsVM: ObservableObject {
     
     private func nextCard() {
         currentCard = game.delegateCard()
-        print("Next card")
     }
     
     public func flipCard() {
         nextCard()
         cardIsFlipped = true
+        if let card = currentCard {
+            game.currentPlayer.getCard(card: card)
+        }
     }
     
     public func nextPlayer() {
@@ -73,7 +75,6 @@ class CardsVM: ObservableObject {
             //TODO: Remove card from array
             cardImageName = "3C"
         }
-        print(cardImageName)
         return cardImageName
     }
     

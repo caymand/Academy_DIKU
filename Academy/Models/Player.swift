@@ -8,7 +8,9 @@
 
 import Foundation
 
-public struct Player: Equatable {
+public struct Player: Equatable, Identifiable {
+    public var id = UUID()
+    
 //    public var sipsLeft: Int
     public var beersDrinken = 0
     public var name: String
@@ -19,6 +21,10 @@ public struct Player: Equatable {
     }
     public static func == (lhs: Player, rhs: Player) -> Bool {
         lhs.name == rhs.name
+    }
+    
+    public mutating func getCard(card: Card) {
+        cards.append(card)
     }
 }
 

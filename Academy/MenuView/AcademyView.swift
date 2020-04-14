@@ -50,6 +50,9 @@ struct AcademyView: View {
                     }
                 }
             }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        
         }
     }
 }

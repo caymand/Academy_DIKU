@@ -29,7 +29,12 @@ public struct Game: CustomStringConvertible {
     }
     
     public var currentPlayer: Player {
-        return players[currentPlayerIndex]
+        get {
+            return players[currentPlayerIndex]
+        }
+        set(newValue) {
+            players[currentPlayerIndex] = newValue
+        }
     }
     
     public mutating func delegateCard() -> Card {

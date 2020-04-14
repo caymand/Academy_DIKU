@@ -10,8 +10,8 @@ import SwiftUI
 
 struct CardsView: View {
     @ObservedObject var cardsVM: CardsVM
-    init(game: Game) {
-        cardsVM = CardsVM(game: game)
+    init(cardsVM: CardsVM) {
+        self.cardsVM = cardsVM
     }
     
     var body: some View {
@@ -25,10 +25,10 @@ struct CardsView: View {
             
             if cardsVM.cardIsFlipped {
                 Text("Sips: \(cardsVM.getCard.sipsForCard())")
-                Spacer()
-                Button(action: cardsVM.nextPlayer) {
-                    Text("Next Player")
-                }
+//                Spacer()
+//                Button(action: cardsVM.nextPlayer) {
+//                    Text("Next Player")
+//                }
             }
         }
     }

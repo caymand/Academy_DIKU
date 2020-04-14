@@ -11,16 +11,38 @@ import SwiftUI
 struct AcademyGameMain: View {
     private var game: Game!
     @ObservedObject var academyGameMainVM: AcademyGameMainVM
+    @ObservedObject var cardsVM: CardsVM
+    @State var presentDetails = false
     
     init(game: Game?) {
         self.game = game
         academyGameMainVM = AcademyGameMainVM(game: game)
+        cardsVM = CardsVM(game: game)
     }
     
     var body: some View {
-        VStack {
-            Text(academyGameMainVM.currentPlayer.name)
-            CardsView(game: game)
+        NavigationView {
+            VStack {
+                Text(academyGameMainVM.currentPlayer.name)
+                CardsView(cardsVM: cardsVM)
+                Spacer()
+                if cardsVM.cardIsFlipped {
+                    Button(action: {
+                        self.cardsVM.nextPlayer()
+                        self.academyGameMainVM.nextPlayer()
+                    }
+                        ) {
+                        Text("Next Player")
+                    }
+                }
+            }
+        .navigationBarItems(trailing: Button(action: {
+            self.presentDetails.toggle()
+        }) {
+            Text("Details")
+        }.sheet(isPresented: $presentDetails) {
+            detailsPlayerList(players: self.game.players)
+        })
         }
     }
 }

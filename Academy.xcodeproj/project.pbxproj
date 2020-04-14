@@ -15,6 +15,10 @@
 		7E53A8CA24361C2300D55936 /* AcademyGameMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E53A8C924361C2300D55936 /* AcademyGameMain.swift */; };
 		7EAA7F6F2434A4FB008CE42E /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA7F6E2434A4FB008CE42E /* PlayerTests.swift */; };
 		7EAA7F772434CD60008CE42E /* PlayerNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA7F762434CD60008CE42E /* PlayerNumberView.swift */; };
+		7EB0AA8B243F6F7100FD3319 /* detailsPlayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0AA8A243F6F7100FD3319 /* detailsPlayerList.swift */; };
+		7EB0AA8D243F6FE600FD3319 /* detailPlayerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0AA8C243F6FE600FD3319 /* detailPlayerRow.swift */; };
+		7EB0AA8F243F7CC200FD3319 /* playerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0AA8E243F7CC200FD3319 /* playerDetails.swift */; };
+		7EB0AA91243F7D9800FD3319 /* playerDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0AA90243F7D9800FD3319 /* playerDetailRow.swift */; };
 		7EB2BF8B243B691C00407132 /* AcademyGameMainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB2BF8A243B691C00407132 /* AcademyGameMainVM.swift */; };
 		7ED3A8672437739B0019CE6C /* AcademyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3A8662437739B0019CE6C /* AcademyViewController.swift */; };
 		7ED3A86B243B3C3D0019CE6C /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3A86A243B3C3D0019CE6C /* CardsView.swift */; };
@@ -64,6 +68,10 @@
 		7EAA7F6E2434A4FB008CE42E /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
 		7EAA7F702434A4FB008CE42E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EAA7F762434CD60008CE42E /* PlayerNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNumberView.swift; sourceTree = "<group>"; };
+		7EB0AA8A243F6F7100FD3319 /* detailsPlayerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailsPlayerList.swift; sourceTree = "<group>"; };
+		7EB0AA8C243F6FE600FD3319 /* detailPlayerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailPlayerRow.swift; sourceTree = "<group>"; };
+		7EB0AA8E243F7CC200FD3319 /* playerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerDetails.swift; sourceTree = "<group>"; };
+		7EB0AA90243F7D9800FD3319 /* playerDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerDetailRow.swift; sourceTree = "<group>"; };
 		7EB2BF8A243B691C00407132 /* AcademyGameMainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyGameMainVM.swift; sourceTree = "<group>"; };
 		7ED3A8662437739B0019CE6C /* AcademyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyViewController.swift; sourceTree = "<group>"; };
 		7ED3A86A243B3C3D0019CE6C /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
@@ -136,6 +144,17 @@
 			path = PlayerTests;
 			sourceTree = "<group>";
 		};
+		7EB0AA89243F6F2E00FD3319 /* detailPlayerList */ = {
+			isa = PBXGroup;
+			children = (
+				7EB0AA8A243F6F7100FD3319 /* detailsPlayerList.swift */,
+				7EB0AA8C243F6FE600FD3319 /* detailPlayerRow.swift */,
+				7EB0AA8E243F7CC200FD3319 /* playerDetails.swift */,
+				7EB0AA90243F7D9800FD3319 /* playerDetailRow.swift */,
+			);
+			path = detailPlayerList;
+			sourceTree = "<group>";
+		};
 		7ED3A868243B3BEC0019CE6C /* MenuView */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +215,7 @@
 				7ED3A86C243B3C5F0019CE6C /* AcademyVM */,
 				7ED3A868243B3BEC0019CE6C /* MenuView */,
 				7ED3A869243B3C0E0019CE6C /* GameView */,
+				7EB0AA89243F6F2E00FD3319 /* detailPlayerList */,
 				7EDA817B24335AEC00E3425E /* Assets.xcassets */,
 				7EDA818024335AEC00E3425E /* LaunchScreen.storyboard */,
 				7EDA818324335AEC00E3425E /* Info.plist */,
@@ -403,9 +423,13 @@
 				7E2C58DD2433A05000961CE5 /* Player.swift in Sources */,
 				7E2C58E52433A25300961CE5 /* CardTypes.swift in Sources */,
 				7EAA7F772434CD60008CE42E /* PlayerNumberView.swift in Sources */,
+				7EB0AA8B243F6F7100FD3319 /* detailsPlayerList.swift in Sources */,
+				7EB0AA8F243F7CC200FD3319 /* playerDetails.swift in Sources */,
+				7EB0AA91243F7D9800FD3319 /* playerDetailRow.swift in Sources */,
 				7E2C58DF2433A0B200961CE5 /* Game.swift in Sources */,
 				7E53A8C824360D6900D55936 /* PersonForm.swift in Sources */,
 				7ED3A86B243B3C3D0019CE6C /* CardsView.swift in Sources */,
+				7EB0AA8D243F6FE600FD3319 /* detailPlayerRow.swift in Sources */,
 				7E53A8CA24361C2300D55936 /* AcademyGameMain.swift in Sources */,
 				7EB2BF8B243B691C00407132 /* AcademyGameMainVM.swift in Sources */,
 				7EDA81A624335DF500E3425E /* AcademyView.swift in Sources */,
@@ -627,6 +651,7 @@
 				DEVELOPMENT_TEAM = D46GUNQNX6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Academy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -647,6 +672,7 @@
 				DEVELOPMENT_TEAM = D46GUNQNX6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Academy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
