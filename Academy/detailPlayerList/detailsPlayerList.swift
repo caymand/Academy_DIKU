@@ -11,14 +11,18 @@ import SwiftUI
 struct detailsPlayerList: View {
     var players: [Player]
     var body: some View {
-        List(players, id: \.id) { player in
-            detailPlayerRow(player: player)
+        NavigationView {
+            List(players, id: \.id) { player in
+                NavigationLink(destination: playerDetails(player: player)) {
+                    detailPlayerRow(player: player)
+                }
+            }
         }
     }
 }
 
-struct detailsPlayerList_Previews: PreviewProvider {
-    static var previews: some View {
-        detailsPlayerList(players: [Player(name: "Kristoffer")])
-    }
-}
+//struct detailsPlayerList_Previews: PreviewProvider {
+//    static var previews: some View {
+//        detailsPlayerList(players: [Player(name: "Kristoffer")])
+//    }
+//}

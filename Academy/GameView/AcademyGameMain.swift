@@ -12,12 +12,18 @@ struct AcademyGameMain: View {
     private var game: Game!
     @ObservedObject var academyGameMainVM: AcademyGameMainVM
     @ObservedObject var cardsVM: CardsVM
+    
     @State var presentDetails = false
+    @State var presentStopWatch = false
+    @State var currentPlayer: Player?
+    @State var stopwatchFinishedPresenting = false
+    @State var time = 0
     
     init(game: Game?) {
         self.game = game
         academyGameMainVM = AcademyGameMainVM(game: game)
         cardsVM = CardsVM(game: game)
+        currentPlayer = game?.currentPlayer
     }
     
     var body: some View {
@@ -26,15 +32,39 @@ struct AcademyGameMain: View {
                 Text(academyGameMainVM.currentPlayer.name)
                 CardsView(cardsVM: cardsVM)
                 Spacer()
-                if cardsVM.cardIsFlipped {
+                if cardsVM.cardIsFlipped && !cardsVM.aceWasFlipped {
                     Button(action: {
+                        self.academyGameMainVM.updateGameState()
+                        self.cardsVM.nextPlayer()
+                        self.academyGameMainVM.nextPlayer()
+                    }
+                        ) {
+                            Text("Next Player")
+                    }
+
+                } else if stopwatchFinishedPresenting {
+                    Button(action: {
+                        self.stopwatchFinishedPresenting = false
+                        self.academyGameMainVM.updateGameState(chuggedBeerTime: self.time)
+                        
+                        self.cardsVM.flipCard()
                         self.cardsVM.nextPlayer()
                         self.academyGameMainVM.nextPlayer()
                     }
                         ) {
                         Text("Next Player")
                     }
+                } else if cardsVM.cardIsFlipped && cardsVM.aceWasFlipped {
+                    Button(action: {
+                        self.presentStopWatch.toggle()
+                    }
+                        ) {
+                            Text("Drinking Challenge")
+                    }.sheet(isPresented: $presentStopWatch) {
+                        StopwatchView(showStopwatch: self.$presentStopWatch, time: self.$time, finishedPresenting: self.$stopwatchFinishedPresenting)
+                    }
                 }
+                
             }
         .navigationBarItems(trailing: Button(action: {
             self.presentDetails.toggle()
@@ -44,11 +74,5 @@ struct AcademyGameMain: View {
             detailsPlayerList(players: self.game.players)
         })
         }
-    }
-}
-
-struct AcademyGameMain_Previews: PreviewProvider {
-    static var previews: some View {
-        AcademyGameMain(game: Game(players: [Player(name: "Kristoffer")], sipsPerBeer: 14))
     }
 }

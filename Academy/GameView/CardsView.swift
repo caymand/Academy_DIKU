@@ -9,7 +9,9 @@
 import SwiftUI
 
 struct CardsView: View {
+    //@ObservedObject var cardsVM: CardsVM
     @ObservedObject var cardsVM: CardsVM
+    @State var aceFlipped = false
     init(cardsVM: CardsVM) {
         self.cardsVM = cardsVM
     }
@@ -24,11 +26,7 @@ struct CardsView: View {
             }.disabled(cardsVM.cardIsFlipped)
             
             if cardsVM.cardIsFlipped {
-                Text("Sips: \(cardsVM.getCard.sipsForCard())")
-//                Spacer()
-//                Button(action: cardsVM.nextPlayer) {
-//                    Text("Next Player")
-//                }
+                Text("Sips: \(cardsVM.sipsForCard)")
             }
         }
     }

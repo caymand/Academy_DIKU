@@ -39,7 +39,7 @@ struct AcademyView: View {
                     PlayerNumberView(academyVM: academyVM)
                         .padding(.bottom, 50)
                     Spacer()
-                    NavigationLink(destination: AcademyGameMain(game: academyVM.getGame), isActive: $shouldTransition) {
+                    NavigationLink(destination: AcademyGameMotherView(game: academyVM.getGame), isActive: $shouldTransition) {
                         Text("Begin")
                             .foregroundColor(.white)
                             .font(.title)

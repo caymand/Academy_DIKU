@@ -10,11 +10,12 @@ import SwiftUI
 
 struct detailPlayerRow: View {
     var player: Player
+    
     var body: some View {
         HStack {
             Text(player.name)
             Text("Beers drinken: \(player.beersDrinken)" )
-            Text("Cards drawn: \(player.cards.count)" )
+            Text("Points: \(player.points)" )
         }
     }
 }

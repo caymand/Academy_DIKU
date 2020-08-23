@@ -9,9 +9,10 @@
 import Foundation
 
 public struct Player: Equatable, Identifiable {
-    public var id = UUID()
+    private var sipsToTake = 0    
+    private var score = 0
     
-//    public var sipsLeft: Int
+    public var id = UUID()
     public var beersDrinken = 0
     public var name: String
     public var cards = [Card]()
@@ -19,12 +20,35 @@ public struct Player: Equatable, Identifiable {
     init(name: String) {
         self.name = name        
     }
+    
+    public var sipsTaken: Int {
+        get {
+            return sipsToTake
+        }
+    }
+    
+    
+    public var points: Int {
+        return score
+    }
+    
     public static func == (lhs: Player, rhs: Player) -> Bool {
         lhs.name == rhs.name
     }
     
     public mutating func getCard(card: Card) {
+        sipsToTake = card.rank.rawValue
         cards.append(card)
+    }
+    
+    public mutating func finishBeer() {
+        beersDrinken += 1
+        sipsToTake = 0
+    }
+    
+    public mutating func recievePoints(_ points: Int) {
+        score += points
+        print("Score: \(score)")
     }
 }
 

@@ -11,8 +11,11 @@
 		7E2C58DF2433A0B200961CE5 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C58DE2433A0B200961CE5 /* Game.swift */; };
 		7E2C58E12433A14E00961CE5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C58E02433A14E00961CE5 /* Card.swift */; };
 		7E2C58E52433A25300961CE5 /* CardTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C58E42433A25300961CE5 /* CardTypes.swift */; };
+		7E30A6262448AA3100D389AE /* DetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E30A6252448AA3100D389AE /* DetailsVM.swift */; };
 		7E53A8C824360D6900D55936 /* PersonForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E53A8C724360D6900D55936 /* PersonForm.swift */; };
 		7E53A8CA24361C2300D55936 /* AcademyGameMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E53A8C924361C2300D55936 /* AcademyGameMain.swift */; };
+		7E7A3EF924ACD78900029230 /* AcademyGameMotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A3EF824ACD78900029230 /* AcademyGameMotherView.swift */; };
+		7E86C85B24562EE5008A7C5F /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86C85A24562EE5008A7C5F /* Round.swift */; };
 		7EAA7F6F2434A4FB008CE42E /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA7F6E2434A4FB008CE42E /* PlayerTests.swift */; };
 		7EAA7F772434CD60008CE42E /* PlayerNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA7F762434CD60008CE42E /* PlayerNumberView.swift */; };
 		7EB0AA8B243F6F7100FD3319 /* detailsPlayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0AA8A243F6F7100FD3319 /* detailsPlayerList.swift */; };
@@ -31,6 +34,9 @@
 		7EDA818D24335AED00E3425E /* AcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA818C24335AED00E3425E /* AcademyTests.swift */; };
 		7EDA819824335AED00E3425E /* AcademyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA819724335AED00E3425E /* AcademyUITests.swift */; };
 		7EDA81A624335DF500E3425E /* AcademyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA81A524335DF500E3425E /* AcademyView.swift */; };
+		7EF8C7E424AB656E00DD6D3A /* CardDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8C7E324AB656E00DD6D3A /* CardDealer.swift */; };
+		7EF8C7E724AB9BD500DD6D3A /* StopWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8C7E624AB9BD500DD6D3A /* StopWatchView.swift */; };
+		7EF8C7E924AB9D5B00DD6D3A /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8C7E824AB9D5B00DD6D3A /* StopWatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +68,11 @@
 		7E2C58DE2433A0B200961CE5 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		7E2C58E02433A14E00961CE5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		7E2C58E42433A25300961CE5 /* CardTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTypes.swift; sourceTree = "<group>"; };
+		7E30A6252448AA3100D389AE /* DetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVM.swift; sourceTree = "<group>"; };
 		7E53A8C724360D6900D55936 /* PersonForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonForm.swift; sourceTree = "<group>"; };
 		7E53A8C924361C2300D55936 /* AcademyGameMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyGameMain.swift; sourceTree = "<group>"; };
+		7E7A3EF824ACD78900029230 /* AcademyGameMotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyGameMotherView.swift; sourceTree = "<group>"; };
+		7E86C85A24562EE5008A7C5F /* Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
 		7EAA7F6C2434A4FB008CE42E /* PlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAA7F6E2434A4FB008CE42E /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
 		7EAA7F702434A4FB008CE42E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +99,9 @@
 		7EDA819724335AED00E3425E /* AcademyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyUITests.swift; sourceTree = "<group>"; };
 		7EDA819924335AED00E3425E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EDA81A524335DF500E3425E /* AcademyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyView.swift; sourceTree = "<group>"; };
+		7EF8C7E324AB656E00DD6D3A /* CardDealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDealer.swift; sourceTree = "<group>"; };
+		7EF8C7E624AB9BD500DD6D3A /* StopWatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchView.swift; sourceTree = "<group>"; };
+		7EF8C7E824AB9D5B00DD6D3A /* StopWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +143,9 @@
 				7E2C58E42433A25300961CE5 /* CardTypes.swift */,
 				7E2C58E02433A14E00961CE5 /* Card.swift */,
 				7E2C58DE2433A0B200961CE5 /* Game.swift */,
+				7E86C85A24562EE5008A7C5F /* Round.swift */,
+				7EF8C7E324AB656E00DD6D3A /* CardDealer.swift */,
+				7EF8C7E824AB9D5B00DD6D3A /* StopWatch.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,6 +183,7 @@
 		7ED3A869243B3C0E0019CE6C /* GameView */ = {
 			isa = PBXGroup;
 			children = (
+				7E7A3EF824ACD78900029230 /* AcademyGameMotherView.swift */,
 				7E53A8C924361C2300D55936 /* AcademyGameMain.swift */,
 				7ED3A86A243B3C3D0019CE6C /* CardsView.swift */,
 			);
@@ -180,6 +196,7 @@
 				7ED3A8662437739B0019CE6C /* AcademyViewController.swift */,
 				7EB2BF8A243B691C00407132 /* AcademyGameMainVM.swift */,
 				7ED3A86D243B3C790019CE6C /* CardsVM.swift */,
+				7E30A6252448AA3100D389AE /* DetailsVM.swift */,
 			);
 			path = AcademyVM;
 			sourceTree = "<group>";
@@ -215,6 +232,7 @@
 				7ED3A86C243B3C5F0019CE6C /* AcademyVM */,
 				7ED3A868243B3BEC0019CE6C /* MenuView */,
 				7ED3A869243B3C0E0019CE6C /* GameView */,
+				7EF8C7E524AB9BB400DD6D3A /* StopWatchView */,
 				7EB0AA89243F6F2E00FD3319 /* detailPlayerList */,
 				7EDA817B24335AEC00E3425E /* Assets.xcassets */,
 				7EDA818024335AEC00E3425E /* LaunchScreen.storyboard */,
@@ -248,6 +266,14 @@
 				7EDA819924335AED00E3425E /* Info.plist */,
 			);
 			path = AcademyUITests;
+			sourceTree = "<group>";
+		};
+		7EF8C7E524AB9BB400DD6D3A /* StopWatchView */ = {
+			isa = PBXGroup;
+			children = (
+				7EF8C7E624AB9BD500DD6D3A /* StopWatchView.swift */,
+			);
+			path = StopWatchView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,17 +451,23 @@
 				7EAA7F772434CD60008CE42E /* PlayerNumberView.swift in Sources */,
 				7EB0AA8B243F6F7100FD3319 /* detailsPlayerList.swift in Sources */,
 				7EB0AA8F243F7CC200FD3319 /* playerDetails.swift in Sources */,
+				7E30A6262448AA3100D389AE /* DetailsVM.swift in Sources */,
 				7EB0AA91243F7D9800FD3319 /* playerDetailRow.swift in Sources */,
 				7E2C58DF2433A0B200961CE5 /* Game.swift in Sources */,
 				7E53A8C824360D6900D55936 /* PersonForm.swift in Sources */,
 				7ED3A86B243B3C3D0019CE6C /* CardsView.swift in Sources */,
+				7EF8C7E924AB9D5B00DD6D3A /* StopWatch.swift in Sources */,
 				7EB0AA8D243F6FE600FD3319 /* detailPlayerRow.swift in Sources */,
+				7EF8C7E724AB9BD500DD6D3A /* StopWatchView.swift in Sources */,
 				7E53A8CA24361C2300D55936 /* AcademyGameMain.swift in Sources */,
 				7EB2BF8B243B691C00407132 /* AcademyGameMainVM.swift in Sources */,
 				7EDA81A624335DF500E3425E /* AcademyView.swift in Sources */,
 				7E2C58E12433A14E00961CE5 /* Card.swift in Sources */,
 				7ED3A86E243B3C790019CE6C /* CardsVM.swift in Sources */,
+				7EF8C7E424AB656E00DD6D3A /* CardDealer.swift in Sources */,
 				7EDA817624335AEA00E3425E /* AppDelegate.swift in Sources */,
+				7E86C85B24562EE5008A7C5F /* Round.swift in Sources */,
+				7E7A3EF924ACD78900029230 /* AcademyGameMotherView.swift in Sources */,
 				7EDA817824335AEA00E3425E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

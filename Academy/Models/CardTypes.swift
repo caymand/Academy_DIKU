@@ -9,9 +9,8 @@
 import Foundation
 
 public enum Rank: Int, CaseIterable {
-    case ace = 1
-    case two, three, four, five, six, seven, eight, nine, ten
-    case jack, queen, king
+    case two = 2, three, four, five, six, seven, eight, nine, ten
+    case jack, queen, king, ace
     
     public func numberOfSips(sipsForChug: Int) -> Int {
         switch self {

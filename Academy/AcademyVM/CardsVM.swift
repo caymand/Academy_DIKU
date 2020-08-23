@@ -11,71 +11,45 @@ import UIKit
 
 class CardsVM: ObservableObject {
     private var game: Game!
-    private var currentCard: Card?
+//    private var currentCard: Card?
+    //TODO: weird to have cardDealer field? Bad design?
+    private var cardDealer: CardDealer
     @Published var cardIsFlipped = false
     
     init(game: Game?) {
         self.game = game
+        cardDealer = self.game.getCardDealer
     }
     
-//    If there is no current card, the first card in the deck of cards is returned
-    public var getCard: Card {
-        if let card = currentCard {
-            return card
-        } else {
-            return game.allCards.removeFirst()
+    public var sipsForCard: Int {
+        get {
+            return cardDealer.getCurrentCard.sipsForCard()
         }
     }
     
-    private func nextCard() {
-        currentCard = game.delegateCard()
+    public var aceWasFlipped: Bool {
+        get {
+            return cardDealer.getCurrentCard.rank == Rank.ace
+        }
     }
     
     public func flipCard() {
-        nextCard()
         cardIsFlipped = true
-        if let card = currentCard {
-            game.currentPlayer.getCard(card: card)
-        }
+        game.currentPlayer.getCard(card: cardDealer.getCurrentCard)
+        if game.currentPlayer.sipsTaken >= game.sipsPerBeer {
+            game.currentPlayer.finishBeer()
+        }   
     }
     
     public func nextPlayer() {
         cardIsFlipped = false
+        cardDealer.drawNewCard()
     }
     
+    
     public func nextCardImageName() -> String {
-        var cardImageName = ""
-        if let rank = currentCard?.rank {
-            if let suit = currentCard?.suit {
-                
-                switch rank {
-                case .ace:
-                    cardImageName += "A"
-                case .jack:
-                    cardImageName += "J"
-                case .queen:
-                    cardImageName += "Q"
-                case .king:
-                    cardImageName += "K"
-                default:
-                    cardImageName += String(rank.rawValue)
-                }
-                switch suit {
-                case .spades:
-                    cardImageName += "S"
-                case .clubs:
-                    cardImageName += "C"
-                case .diamonds:
-                    cardImageName += "D"
-                case .hearts:
-                    cardImageName += "H"
-                }
-            }
-        } else {
-            //TODO: Remove card from array
-            cardImageName = "3C"
-        }
-        return cardImageName
+        return cardDealer.getCurrentCard.nameForCard()
     }
     
 }
+
